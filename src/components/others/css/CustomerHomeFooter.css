@@ -1,0 +1,120 @@
+#customerHomeFooter {
+  position: absolute;
+  background-color: black;
+  width: 1536px;
+  height: 202px;
+  top: 663px;
+}
+
+#customerHomeFirstText {
+  position: absolute;
+  left: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  color: white;
+  top: 3px;
+}
+
+#customerHomeFooterMainContainer {
+  position: absolute;
+  top: 29px;
+  left: 16px;
+  width: 1508px;
+  height: 166px;
+  background-color: transparent;
+  overflow-y: hidden;
+  overflow-x: auto;
+  display: flex;
+}
+
+#historyShowroomContainer {
+  position: relative;
+  width: 245px;
+  height: 118px;
+  border-radius: 5px;
+  background-color: floralwhite;
+  margin-right: 28px;
+  top: 18px;
+  cursor: pointer;
+  left: 97px;
+}
+
+#historyShowroomImg {
+  position: absolute;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  left: 7px;
+  top: 7px;
+  cursor: pointer;
+}
+
+#historyShowroomCarName {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: black;
+  left: 5px;
+  top: 73px;
+}
+
+#historyShowroomLocation {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: darkslateblue;
+  left: 5px;
+  top: 89px;
+}
+
+#historyShowroomTimeViewedP {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: black;
+  left: 154px;
+  top: 5px;
+}
+
+#historyShowroomTimeViewed {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1.1em;
+  color: darkred;
+  left: 144px;
+  top: 23px;
+}
+
+#historyShowroomDateViewed {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: darkgreen;
+  left: 171px;
+  top: 44px;
+}
+
+#historyShowroomViewP {
+  position: absolute;
+  font-family: sans-serif;
+  color: grey;
+  left: 225px;
+  top: 100px;
+}
+
+#historyShowroomManageP {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: ghostwhite;
+  top: 1px;
+  cursor: pointer;
+}
+
+#customerHomeSecondText {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: coral;
+  left: 1px;
+}

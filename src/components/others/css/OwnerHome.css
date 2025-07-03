@@ -1,0 +1,2675 @@
+#homeUIBG {
+  position: absolute;
+  width: 1536px;
+  height: 660px;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+#displayCDBG {
+  position: absolute;
+  width: 1536px;
+  height: 660px;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+#modalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#MCmainModal {
+  position: absolute;
+  width: 550px;
+  height: 493px;
+  background-color: aliceblue;
+  border-radius: 5px;
+  right: 468px;
+  bottom: 242px;
+}
+
+#MCmainModalFT {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  color: black;
+  left: 5px;
+  top: 3px;
+}
+
+#modalNameCarInput {
+  position: absolute;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 7px 45px;
+  border-radius: 5px;
+  top: 34px;
+  left: 15px;
+}
+
+#modalPriceCarInput {
+  position: absolute;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 7px 43px;
+  border-radius: 5px;
+  top: 34px;
+  left: 303px;
+}
+
+#modalSeatsInput {
+  position: absolute;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 7px 45px;
+  border-radius: 5px;
+  top: 86px;
+  left: 15px;
+}
+
+#modalMileageInput {
+  position: absolute;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 7px 43px;
+  border-radius: 5px;
+  top: 86px;
+  left: 303px;
+}
+
+#modalEngineSelect {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 7px 67px;
+  border-radius: 5px;
+  top: 138px;
+  left: 15px;
+}
+
+#modalTransmissionSelect {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 7px 47px;
+  border-radius: 5px;
+  top: 138px;
+  left: 303px;
+}
+
+#modalColorSelect {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 7px 72px;
+  border-radius: 5px;
+  top: 196px;
+  left: 15px;
+}
+
+.image-upload-container {
+  display: inline-block;
+  text-align: center;
+}
+
+.upload-button {
+  background-color: lightgray;
+  color: black;
+  padding: 8px 64px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  top: 176px;
+  right: -285px;
+}
+
+.upload-button:hover {
+  background-color: gray;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.hidden-input {
+  display: none;
+}
+
+#modalNOCinput {
+  position: absolute;
+  padding: 8px 46px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 6px;
+  top: 254px;
+  right: 298px;
+}
+
+#modalEMIinput {
+  position: absolute;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 7px 44px;
+  border-radius: 5px;
+  top: 255px;
+  left: 300px;
+}
+
+#modalDescriptionInput {
+  position: absolute;
+  left: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 5px;
+  text-indent: -177px;
+  top: 308px;
+  padding: 42px 189px;
+}
+
+#saveNewModalBtn {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 8px 85px;
+  background-color: lavender;
+  border-radius: 6px;
+  cursor: pointer;
+  top: 439px;
+  left: 10px;
+}
+
+#showHistoryModel {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 8px 85px;
+  background-color: lightgoldenrodyellow;
+  border-radius: 6px;
+  cursor: pointer;
+  top: 439px;
+  left: 287px;
+}
+
+#CAMMcontainer {
+  position: absolute;
+  width: 550px;
+  height: 493px;
+  background-color: aliceblue;
+  border-radius: 5px;
+  right: 468px;
+  bottom: 242px;
+}
+
+#CAMMCtextFirst {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  color: black;
+  left: 5px;
+  top: 3px;
+}
+
+#CAMMcontainerMain {
+  position: relative;
+  left: 6px;
+  width: 544px;
+  height: 407px;
+  background-color: transparent;
+  overflow-x: hidden;
+  overflow-y: auto;
+  top: 27px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#CAMMcloseBtn {
+  position: absolute;
+  padding: 7px 88px;
+  background-color: lavenderblush;
+  cursor: pointer;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 6px;
+  top: 448px;
+  left: 13px;
+}
+
+#CAMMGBbtn {
+  position: absolute;
+  padding: 7px 88px;
+  background-color: lemonchiffon;
+  cursor: pointer;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 6px;
+  top: 448px;
+  left: 309px;
+}
+
+#CAMMcardetails {
+  position: relative;
+  width: 225px;
+  height: 170px;
+  background-color: lightgray;
+  border-radius: 5px;
+  top: 8px;
+  left: 20px;
+  margin-right: 29px;
+  border: 0.8px solid black;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: 32px;
+}
+
+#CAMMcardImage {
+  position: absolute;
+  width: 208px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  top: 8px;
+  left: 8px;
+  cursor: pointer;
+}
+
+#CAMMcardName {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9em;
+  left: 7px;
+  top: 110px;
+}
+
+#CAMMcardPrice {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9em;
+  left: 7px;
+  top: 127px;
+}
+
+#CAMMcardSeats {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9em;
+  left: 7px;
+  top: 144px;
+}
+
+#CAMMcardMD {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9em;
+  left: 170px;
+  top: 149px;
+  cursor: pointer;
+}
+
+#CAMMtextNoCars {
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.4em;
+  color: black;
+  left: 158px;
+  top: 165px;
+}
+
+#DCIcontainer {
+  position: absolute;
+  width: 370px;
+  height: 619px;
+  background-color: transparent;
+  overflow-x: hidden;
+  overflow-y: auto;
+  left: 41px;
+  bottom: 13px;
+}
+
+#DCPFtext {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  color: black;
+  left: 10px;
+  top: 2px;
+}
+
+#DCISL {
+  position: absolute;
+  height: 1px;
+  width: 842px;
+  rotate: 90deg;
+  background-color: black;
+  top: 421px;
+  right: 705px;
+}
+
+#DCIcarImage {
+  position: relative;
+  width: 237px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 5px;
+  cursor: pointer;
+  left: 23px;
+  margin-bottom: 20px;
+  top: 4px;
+}
+
+#moreSelectedCarDetails {
+  position: absolute;
+  width: 1126px;
+  height: 660px;
+  background-color: transparent;
+  left: 410px;
+  overflow: hidden;
+}
+
+#SCimageContainer {
+  position: absolute;
+  width: 1126px;
+  height: 660px;
+  background-color: transparent;
+  left: 410px;
+  overflow: hidden;
+}
+
+#MSCDSL {
+  position: absolute;
+  height: 1px;
+  width: 842px;
+  rotate: 90deg;
+  background-color: black;
+  top: 421px;
+  right: -130px;
+}
+
+#MSCDmainText {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  left: 8px;
+  top: 3px;
+}
+
+#MSCDcontainer {
+  position: absolute;
+  width: 798px;
+  height: 300px;
+  background-color: lavender;
+  border: 0.8px solid black;
+  left: 18px;
+  top: 29px;
+  border-radius: 8px;
+}
+
+#MSCDmodelName {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  left: 6px;
+  top: 2px;
+}
+
+#colorModelname {
+  color: black;
+}
+
+#MSCDengineType {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  left: 6px;
+  top: 24px;
+}
+
+#MSCDcolorCar {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  left: 6px;
+  top: 45px;
+}
+
+#MSCDmileageOfCar {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  left: 6px;
+  top: 66px;
+}
+
+#MSCDsittingCapacityOfCar {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  left: 6px;
+  top: 87px;
+}
+
+#MSCDtransmittionType {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  left: 6px;
+  top: 106px;
+}
+
+#MSCDtotalCarsCount {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  left: 6px;
+  top: 126px;
+}
+
+#MSCDdescHead {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  left: 6px;
+  top: 146px;
+}
+
+#MSCDdescriptionContainer {
+  position: absolute;
+  background-color: lightgray;
+  left: 13px;
+  top: 174px;
+  width: 567px;
+  height: 117px;
+  border-radius: 6px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#MSCDdescription {
+  position: absolute;
+  left: 8px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  color: black;
+}
+
+#MSCDcostP {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  left: 600px;
+  color: black;
+  top: 274px;
+}
+
+#priceOfCar {
+  color: blue;
+  cursor: pointer;
+}
+
+#MSCDemiHead {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9em;
+  left: 607px;
+  color: black;
+  top: 261px;
+}
+
+#MSCDemitextcolor {
+  color: lightcoral;
+}
+
+#MSCDedittext {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  color: black;
+  left: 719px;
+  cursor: pointer;
+}
+
+#MSCDsecondLine {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  left: 8px;
+  top: 331px;
+}
+
+#MSCDsecondContainer {
+  position: absolute;
+  width: 801px;
+  height: 288px;
+  background-color: lightgray;
+  border: 0.8px solid black;
+  left: 18px;
+  top: 358px;
+  border-radius: 8px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#MSCDsecondContainer::-webkit-scrollbar {
+  display: none;
+}
+
+#bookedDataForOtherCarsBG {
+  background-color: dimgrey;
+  border: 1px solid black;
+  border-radius: 6px;
+  height: 120px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#bookedDataForOtherCarsImageContainer {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: black;
+  border-radius: 50%;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+#bookedDataForOtherCarsCustomerName {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: darkturquoise;
+  left: 84px;
+  bottom: 61px;
+  cursor: pointer;
+}
+
+#bookedDataForOCdate {
+  font-family: sans-serif;
+  font-size: 0.8em;
+  color: darkgray;
+  left: 313px;
+  top: -151px;
+  position: relative;
+}
+
+#bookedDataRejectP {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 0.8em;
+  color: lightcoral;
+  left: 7px;
+  top: -66px;
+  cursor: pointer;
+}
+
+#bookedDataViewP {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: gainsboro;
+  left: 328px;
+  top: -81px;
+  cursor: pointer;
+}
+
+#bookedDataForOCTextContainer {
+  position: relative;
+  width: 285px;
+  height: 66px;
+  background-color: aliceblue;
+  border-radius: 0px 10px 10px;
+  left: 85px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  top: -60px;
+}
+
+#bookedDataForOCTextContainer::-webkit-scrollbar {
+  display: none;
+}
+
+#bookedDataForOCtext {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: black;
+  cursor: pointer;
+}
+
+#bookedDataForOtherCarsImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#MSCDthirdText {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  left: 842px;
+  top: 2px;
+}
+
+#MSCDpendingbookingsContainer {
+  position: absolute;
+  width: 290px;
+  height: 631px;
+  background-color: transparent;
+  overflow-x: hidden;
+  overflow-y: auto;
+  left: 836px;
+  top: 29px;
+}
+
+#SCimageData {
+  position: absolute;
+  width: 1093px;
+  height: 608px;
+  object-fit: cover;
+  border-radius: 6px;
+  top: 38px;
+  left: 20px;
+}
+
+#goBackFromSelectedImageDisplayBtn {
+  position: absolute;
+  padding: 3px 10px;
+  background-color: lightgoldenrodyellow;
+  cursor: pointer;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 6px;
+  top: 6px;
+  left: 11px;
+}
+
+#editCarElementsModel {
+  position: absolute;
+  width: 490px;
+  height: 445px;
+  background-color: aliceblue;
+  border: 0.8px solid black;
+  left: 560px;
+  top: 88px;
+  border-radius: 8px;
+}
+
+#editCEMFirstHead {
+  position: absolute;
+  left: 6px;
+  top: 3px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2em;
+  color: black;
+}
+
+#ECEMcontainerSL {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  top: 32px;
+}
+
+#editCarPriceInput {
+  position: absolute;
+  padding: 9px 32px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 5px;
+  top: 46px;
+  left: 13px;
+}
+
+#editCarCountInput {
+  position: absolute;
+  padding: 9px 32px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 5px;
+  top: 46px;
+  left: 268px;
+}
+
+#editCarDescriptionInput {
+  position: absolute;
+  left: 13px;
+  top: 112px;
+  width: 463px;
+  height: 160px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 6px;
+  text-indent: 8px;
+}
+
+#descriptionSPtext {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  color: black;
+  top: 87px;
+  left: 19px;
+}
+
+.image-uploader-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 9px 53px;
+  background-color: lightgray;
+  color: black;
+  border: 0.6px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  top: 288px;
+  left: 15px;
+}
+
+.upload-btn:hover {
+  background-color: gray;
+  color: black;
+}
+
+.upload-btn:active {
+  background-color: white;
+  color: black;
+}
+
+#imageInput {
+  display: none;
+}
+
+.preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.image-preview {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#saveChangeInDetailsBtn {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 6px;
+  background-color: lemonchiffon;
+  cursor: pointer;
+  padding: 11px 50px;
+  top: 287px;
+  left: 273px;
+}
+
+#someInfoOCnote {
+  position: absolute;
+  left: 10px;
+  top: 343px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  color: black;
+}
+
+#someInfoOC {
+  position: absolute;
+  left: 22px;
+  top: 365px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  color: black;
+}
+
+#deleteTheCarWord {
+  color: lightcoral;
+  cursor: pointer;
+}
+
+#closeSIcontainer {
+  position: absolute;
+  top: 420px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  color: black;
+  left: 404px;
+  cursor: pointer;
+}
+
+#editUPmodalBackground {
+  position: absolute;
+  width: 287px;
+  background-color: seashell;
+  height: 659px;
+  left: 1246px;
+}
+
+#editUPelementsContainer {
+  position: absolute;
+  left: 20px;
+  top: 55px;
+  border-radius: 5px;
+  border: 0.7px solid black;
+  width: 249px;
+  height: 546px;
+}
+
+#editUPECtext {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  color: black;
+  left: 18px;
+  top: 25px;
+}
+
+#editUP1Text {
+  position: absolute;
+  left: 8px;
+  top: 1px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  color: black;
+}
+
+#editUPnewPass {
+  position: absolute;
+  left: 10px;
+  top: 26px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 5px;
+  padding: 7px 41px;
+}
+
+#editUP2Text {
+  position: absolute;
+  left: 8px;
+  top: 61px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  color: black;
+}
+
+#editUPnewFirstName {
+  position: absolute;
+  left: 10px;
+  top: 88px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 5px;
+  padding: 7px 41px;
+}
+
+#editUP3Text {
+  position: absolute;
+  left: 8px;
+  top: 121px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  color: black;
+}
+
+#editUPnewLastName {
+  position: absolute;
+  left: 10px;
+  top: 151px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 5px;
+  padding: 7px 41px;
+}
+
+.container {
+  text-align: center;
+}
+
+.custom-input-button {
+  display: inline-block;
+  padding: 9px 70px;
+  background-color: lightgray;
+  color: black;
+  font-size: 11px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: 2px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  top: 202px;
+  position: absolute;
+  right: 10px;
+}
+
+.custom-input-button:hover {
+  background-color: gray;
+  color: white;
+  border-color: black;
+}
+
+.custom-input-button:active {
+  background-color: black;
+  color: white;
+}
+
+#moreDetHeadPara {
+  position: absolute;
+  left: 8px;
+  top: 257px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+}
+
+#moreDCslOC {
+  position: absolute;
+  width: 249px;
+  height: 1px;
+  background-color: black;
+  top: 253px;
+}
+
+#moreDetailsNewLocation {
+  position: absolute;
+  left: 18px;
+  top: 284px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 5px;
+  padding: 6px 35px;
+}
+
+.custom-input-button-alt {
+  display: inline-block;
+  padding: 8px 72px;
+  background-color: lemonchiffon;
+  color: black;
+  font-size: 12px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid gray;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  top: 330px;
+  left: 17px;
+}
+
+.custom-input-button-alt:hover {
+  background-color: lightgray;
+  color: black;
+  border-color: white;
+}
+
+.custom-input-button-alt:active {
+  background-color: lightgray;
+  color: black;
+}
+
+#moreDCSL {
+  position: absolute;
+  width: 249px;
+  height: 1px;
+  background-color: black;
+  top: 380px;
+}
+
+#confirmationHeadMD {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  color: black;
+  top: 380px;
+  left: 7px;
+}
+
+#confirmationPasswordTC {
+  position: absolute;
+  left: 10px;
+  top: 409px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 5px;
+  padding: 5px 41px;
+}
+
+#editUserSaveButton {
+  position: absolute;
+  left: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: whitesmoke;
+  border-radius: 7px;
+  cursor: pointer;
+  top: 450px;
+  padding: 7px 72px;
+}
+
+#formSLOEC {
+  position: absolute;
+  width: 249px;
+  height: 1px;
+  background-color: black;
+  top: 496px;
+}
+
+#noteOEC {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9em;
+  color: black;
+  top: 499px;
+  left: 6px;
+}
+
+#deleteACCSpanNOEC {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  color: darkgreen;
+  top: 517px;
+  left: 89px;
+  cursor: pointer;
+}
+
+#closeEditUserProfilePanel {
+  position: absolute;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1em;
+  cursor: pointer;
+  color: black;
+  left: 242px;
+  top: 4px;
+}
+
+#homePageBackgroundImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px);
+}
+
+#homePageFirstContainer {
+  position: absolute;
+  width: 330px;
+  height: 400px;
+  background-color: lightgoldenrodyellow;
+  overflow: hidden;
+  left: 288px;
+  top: 162px;
+  border-radius: 8px;
+  border: 0.8px solid black;
+}
+
+#homePageSecondContainer {
+  position: absolute;
+  width: 330px;
+  height: 400px;
+  background-color: lavender;
+  overflow: hidden;
+  left: 984px;
+  top: 162px;
+  border-radius: 8px;
+  border: 0.8px solid black;
+}
+
+#homePageFirstLine {
+  position: absolute;
+  background-color: white;
+  width: 637px;
+  height: 1px;
+  left: 477px;
+  top: 80px;
+}
+
+#homePageSecondLine {
+  position: absolute;
+  background-color: white;
+  width: 82px;
+  height: 1px;
+  left: 436px;
+  top: 121px;
+  rotate: 90deg;
+}
+
+#homePageThirdLine {
+  position: absolute;
+  background-color: white;
+  width: 82px;
+  height: 1px;
+  left: 1073px;
+  top: 121px;
+  rotate: 90deg;
+}
+
+#homePageFourthLine {
+  position: absolute;
+  background-color: white;
+  width: 100px;
+  height: 1px;
+  left: 1073px;
+  top: 612px;
+  rotate: 90deg;
+}
+
+#homePageFifthLine {
+  position: absolute;
+  background-color: white;
+  width: 98px;
+  height: 1px;
+  left: 426px;
+  top: 610px;
+  rotate: 90deg;
+}
+
+#homePageFirstHeading {
+  position: absolute;
+  left: 8px;
+  top: 1px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  color: black;
+}
+
+#homePageSecondHeading {
+  position: absolute;
+  left: 8px;
+  top: 1px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  color: black;
+}
+
+#homePageFCSL {
+  position: absolute;
+  width: 330px;
+  height: 1px;
+  background-color: black;
+  top: 27px;
+}
+
+#homePagePendingBC {
+  position: absolute;
+  width: 330px;
+  height: 372px;
+  background-color: transparent;
+  top: 28px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#homePagePendingBC::-webkit-scrollbar {
+  display: none;
+}
+
+#homePageCompletedBC {
+  position: absolute;
+  width: 330px;
+  height: 372px;
+  background-color: transparent;
+  overflow-x: hidden;
+  top: 28px;
+  overflow-y: auto;
+}
+
+#homePageCompletedBC::-webkit-scrollbar {
+  display: none;
+}
+
+#middleContainerDefaultUI {
+  position: absolute;
+  width: 364px;
+  height: 330px;
+  background-color: transparent;
+  top: 197px;
+  left: 620px;
+  overflow: hidden;
+}
+
+#middleContainerCircleDiv {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background-color: lawngreen;
+  border-radius: 0.7px solid black;
+  left: 83px;
+  top: 30px;
+}
+
+#MCimageBackground {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#middleContainerModifiedUI {
+  position: absolute;
+  width: 259px;
+  height: 275px;
+  background-color: white;
+  top: 225px;
+  left: 670px;
+  overflow-x: hidden;
+  border-radius: 12px;
+  border: 0.7px solid black;
+  overflow-y: auto;
+}
+
+#MCMUSLOC {
+  position: absolute;
+  width: 341px;
+  height: 1px;
+  background-color: black;
+  top: 24px;
+}
+
+#MCMUimage {
+  position: absolute;
+  width: 237px;
+  height: 165px;
+  object-fit: cover;
+  border-radius: 15px;
+  cursor: pointer;
+  top: 11px;
+  left: 11px;
+}
+
+#MCMUSLOCMC {
+  position: absolute;
+  width: 341px;
+  height: 1px;
+  background-color: lightgrey;
+  top: 186px;
+}
+
+#MCMUemailHead {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9em;
+  left: 13px;
+  top: 193px;
+  color: black;
+}
+
+#MCMUotherHead {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  left: 13px;
+  top: 206px;
+  color: black;
+}
+
+#MCMUnameHead {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2em;
+  left: 13px;
+  top: 225px;
+  color: darkslategray;
+}
+
+#MCMUcloseHead {
+  position: absolute;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1em;
+  color: black;
+  top: 256px;
+  left: 216px;
+  cursor: pointer;
+}
+
+#bookingPendingBGContainerT {
+  position: relative;
+  width: 320px;
+  height: 100px;
+  background-color: transparent;
+  left: 10px;
+  top: 10px;
+  margin-bottom: 22px;
+  overflow: hidden;
+}
+
+#bookingContainerPendingImageBC {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  left: 7px;
+  top: 5px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+#bookingContainerPendingImageElement {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#bookingContainerPendingMainContainer {
+  position: absolute;
+  width: 226px;
+  height: 84px;
+  background-color: aliceblue;
+  border: 0.4px solid black;
+  left: 80px;
+  top: 7px;
+  overflow: hidden;
+  border-radius: 0px 10px 10px 10px;
+}
+
+#bookingContainerPendingName {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9em;
+  color: black;
+  left: 3px;
+  cursor: pointer;
+}
+
+#bookingContainerPendingContent {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9em;
+  color: midnightblue;
+  left: 7px;
+  cursor: pointer;
+  top: 16px;
+}
+
+#viewPendingBooking {
+  position: absolute;
+  font-size: 0.9em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: saddlebrown;
+  left: 78px;
+  top: 63px;
+  cursor: pointer;
+}
+
+#rejectPendingBooking {
+  position: absolute;
+  font-size: 0.9em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: darkred;
+  left: 181px;
+  top: 63px;
+  cursor: pointer;
+}
+
+#showPendingSelectedContainer {
+  position: absolute;
+  width: 330px;
+  height: 400px;
+  background-color: lightgoldenrodyellow;
+  overflow: hidden;
+  left: 288px;
+  top: 205px;
+  border-radius: 8px;
+  border: 0.8px solid black;
+}
+
+#showUserDetailsContainerPB {
+  position: absolute;
+  width: 330px;
+  height: 400px;
+  background-color: black;
+  border-radius: 4px;
+}
+
+#showUserDetailsContainerUserImage {
+  position: absolute;
+  width: 120px;
+  height: 125px;
+  border-radius: 12px;
+  cursor: pointer;
+  left: 10px;
+  top: 10px;
+}
+
+#customerUserNamePB {
+  position: absolute;
+  font-size: 1.1em;
+  color: linen;
+  left: 100px;
+  top: 14px;
+  left: 136px;
+}
+
+#customerDatePB {
+  position: absolute;
+  font-size: 0.8em;
+  color: lightslategrey;
+  left: 100px;
+  top: 37px;
+  left: 136px;
+}
+
+#customerContainerPBSL {
+  position: absolute;
+  width: 201px;
+  height: 1px;
+  background-color: white;
+  left: 132px;
+  top: 77px;
+}
+
+#replyToCustomerPBbtn {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 7px 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  background-color: lavender;
+  left: 141px;
+  top: 90px;
+}
+
+#rejectCustomerPBbtn {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 7px 17px;
+  border-radius: 7px;
+  cursor: pointer;
+  background-color: lightcoral;
+  left: 246px;
+  top: 90px;
+}
+
+#customerQueryText {
+  position: absolute;
+  left: 10px;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: white;
+  top: 140px;
+}
+
+#customerQueryContainerPB {
+  position: absolute;
+  left: 10px;
+  width: 311px;
+  height: 110px;
+  border-radius: 8px;
+  top: 162px;
+  background-color: lightgray;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#customerQueryContainerPB::-webkit-scrollbar {
+  display: none;
+}
+
+#customerQueryContainerPBtext {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: black;
+}
+
+#customerCarSelectedNamePB {
+  position: absolute;
+  top: 277px;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: white;
+  left: 10px;
+}
+
+#customerCarSelectedPricePB {
+  position: absolute;
+  top: 295px;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: white;
+  left: 10px;
+}
+
+#customerCarSelectedCountPB {
+  position: absolute;
+  top: 314px;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: white;
+  left: 10px;
+}
+
+#customerCarMoreDetailsSelected {
+  position: absolute;
+  top: 336px;
+  font-family: sans-serif;
+  font-size: 0.8em;
+  color: white;
+  left: 15px;
+}
+
+#customerCarSelectedModelClosePB {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: darkorange;
+  left: 234px;
+  top: 378px;
+  cursor: pointer;
+}
+
+#carsCountPB {
+  position: relative;
+  color: deeppink;
+}
+
+#carsPricePB {
+  position: relative;
+  color: deepskyblue;
+}
+
+#carsNamePB {
+  position: relative;
+  color: darkturquoise;
+}
+
+#showReplyToUserPendingBookingContainer {
+  position: absolute;
+  width: 340px;
+  height: 444px;
+  background-color: darkgray;
+  border-radius: 5px;
+  left: 983px;
+  top: 182px;
+}
+
+#showReplyToUserPendingBookingHead {
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+#showReplyToUserPBSL {
+  position: absolute;
+  width: 341px;
+  height: 1px;
+  background-color: black;
+  top: 24px;
+}
+
+#showRTUPBUname {
+  position: relative;
+  color: indigo;
+}
+
+#showReplyToUserCarImage {
+  position: absolute;
+  left: 15px;
+  top: 36px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 310px;
+  height: 150px;
+  object-fit: cover;
+}
+
+#showReplyToUserCarName {
+  position: absolute;
+  left: 15px;
+  top: 191px;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: black;
+}
+
+#showReplyToUserCarNameSpan {
+  position: relative;
+  color: midnightblue;
+}
+
+#showReplyToUserPBSL2 {
+  position: absolute;
+  width: 341px;
+  background-color: black;
+  top: 209px;
+  height: 1px;
+}
+
+#showReplyToUserSecondHead {
+  position: absolute;
+  left: 10px;
+  top: 212px;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: black;
+}
+
+#showReplyToUserTextArea {
+  position: absolute;
+  left: 10px;
+  width: 318px;
+  height: 116px;
+  border-radius: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-indent: 8px;
+  top: 231px;
+}
+
+#showReplytoUserSendResponse {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9em;
+  left: 220px;
+  top: 350px;
+  cursor: pointer;
+  color: darkblue;
+}
+
+#showReplyToUserPBSL3 {
+  position: absolute;
+  width: 340px;
+  height: 1px;
+  background-color: black;
+  top: 372px;
+}
+
+#showReplyToUserThirdHead {
+  position: absolute;
+  left: 10px;
+  top: 375px;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: black;
+}
+
+#showReplyToUserEmail {
+  position: absolute;
+  left: 10px;
+  top: 392px;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: darkred;
+  cursor: pointer;
+}
+
+#showReplyToUserCloseP {
+  position: absolute;
+  left: 284px;
+  top: 424px;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: darkslategray;
+  cursor: pointer;
+}
+
+#showRejectBeforeBackground {
+  position: absolute;
+  width: 315px;
+  height: 210px;
+  background-color: white;
+  border-radius: 5px;
+  bottom: 387px;
+  left: 645px;
+}
+
+#showRejectBeforeFirstHead {
+  position: absolute;
+  font-family: sans-serif;
+  left: 6px;
+  top: 3px;
+  font-size: 1em;
+  color: black;
+}
+
+#beforeRejectSpanCustomerName {
+  position: relative;
+  color: darkblue;
+}
+
+#showRejectContainerFirstSL {
+  position: absolute;
+  width: 315px;
+  height: 1px;
+  background-color: black;
+  top: 43px;
+}
+
+#showRejectContainerContent {
+  position: absolute;
+  width: 294px;
+  height: 120px;
+  top: 54px;
+  left: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 6px;
+  text-indent: 10px;
+  border: 0.5px solid darkred;
+}
+
+#showRejectContainerCancelHead {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  color: gray;
+  left: 10px;
+  top: 183px;
+  cursor: pointer;
+}
+
+#showRejectContainerSubmitBtn {
+  position: absolute;
+  padding: 2px 10px;
+  border-radius: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: red;
+  cursor: pointer;
+  color: white;
+  top: 180px;
+  left: 245px;
+}
+
+#noPendingBookinForOwner {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1.4em;
+  color: black;
+  top: 146px;
+  left: 82px;
+}
+
+#completedBookingOwnerBG {
+  position: relative;
+  width: 310px;
+  height: 95px;
+  background-color: transparent;
+  left: 10px;
+  top: 10px;
+  margin-bottom: 19px;
+}
+
+#completedBookingOwnerImageBC {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background-color: black;
+  border-radius: 50%;
+  left: 8px;
+  top: 8px;
+  cursor: pointer;
+}
+
+#completedBookingOwnerImageElement {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#completedBookingsOwnerMainContainer {
+  position: absolute;
+  width: 226px;
+  height: 84px;
+  background-color: aliceblue;
+  border: 0.4px solid black;
+  left: 80px;
+  top: 7px;
+  overflow: hidden;
+  border-radius: 0px 10px 10px 10px;
+}
+
+#completedBookingOwnerAnsHead {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9em;
+  color: black;
+  left: 3px;
+  cursor: pointer;
+}
+
+#completedBookingTimeHead {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.8em;
+  color: black;
+  left: 152px;
+  cursor: pointer;
+}
+
+#completedBookingOwnerAns {
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9em;
+  color: midnightblue;
+  left: 7px;
+  cursor: pointer;
+  top: 16px;
+}
+
+#completedBookingCustomerName {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: darkmagenta;
+  top: 67px;
+  left: 8px;
+  cursor: pointer;
+}
+
+#completedBookingViewBookingP {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: darkslateblue;
+  top: 67px;
+  left: 190px;
+  cursor: pointer;
+}
+
+#showCompletedBookingsMoreDetailsBackground {
+  position: absolute;
+  width: 329px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 5px;
+  bottom: 258px;
+  left: 289px;
+}
+
+#showCompletedBookingsMDcustomerPFP {
+  position: absolute;
+  width: 120px;
+  height: 125px;
+  border-radius: 12px;
+  cursor: pointer;
+  left: 10px;
+  top: 10px;
+}
+
+#showCompletedBookingsMDCustomerName {
+  position: absolute;
+  font-size: 1.1em;
+  color: darkred;
+  left: 100px;
+  top: 14px;
+  left: 136px;
+}
+
+#showCompletedBookingsMDbookedAt {
+  position: absolute;
+  font-size: 0.8em;
+  color: lightslategrey;
+  left: 100px;
+  top: 37px;
+  left: 136px;
+}
+
+#showCompletedBookingsMDSL {
+  position: absolute;
+  width: 201px;
+  height: 1px;
+  background-color: black;
+  left: 132px;
+  top: 77px;
+}
+
+#showCompletedBookingCompletedAthead {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 0.8em;
+  color: black;
+  left: 133px;
+  top: 80px;
+}
+
+#showCompletedBookingCompletedAt {
+  position: absolute;
+  font-size: 0.8em;
+  color: lightslategrey;
+  left: 100px;
+  top: 93px;
+  left: 136px;
+}
+
+#showCompletedBookingsCustomerQueHead {
+  position: absolute;
+  left: 10px;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: black;
+  top: 140px;
+}
+
+#showCompletedBookingsCustomerQueContainer {
+  position: absolute;
+  left: 10px;
+  width: 145px;
+  height: 110px;
+  border-radius: 8px;
+  top: 162px;
+  background-color: lightgray;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#showCompletedBookingsCustomerQueContainer::-webkit-scrollbar {
+  display: none;
+}
+
+#showCompletedBookingsCustomerQueText {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: black;
+}
+
+#showCompletedBookingsOwnerQueHead {
+  position: absolute;
+  left: 171px;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: black;
+  top: 140px;
+}
+
+#showCompletedBookingsOwnerQueContainer {
+  position: absolute;
+  left: 172px;
+  width: 145px;
+  height: 110px;
+  border-radius: 8px;
+  top: 162px;
+  background-color: dimgray;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#showCompletedBookingsOwnerQueContainer::-webkit-scrollbar {
+  display: none;
+}
+
+#showCompletedOwnerBookingQueText {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: snow;
+}
+
+#showCompletedBookingUserQueryBelowHead {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: darkslategray;
+  left: 10px;
+  top: 274px;
+  cursor: pointer;
+}
+
+#showCompletedBookingUserQueryBelowText {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: darkslategray;
+  left: 176px;
+  top: 274px;
+  cursor: pointer;
+}
+
+#showCompletedBookingsCarName {
+  position: absolute;
+  top: 292px;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: black;
+  left: 10px;
+}
+
+#showCompletedBookingsCarNameSpan {
+  position: relative;
+  color: darkblue;
+  cursor: pointer;
+}
+
+#showCompletedBookingsCarModelSpan {
+  position: relative;
+  color: darkmagenta;
+  cursor: pointer;
+}
+
+#showCompletedBookingsCarCountSpan {
+  position: relative;
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+#showCompletedBookingsCarModel {
+  position: absolute;
+  top: 311px;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: black;
+  left: 10px;
+}
+
+#showCompletedBookingsCarCount {
+  position: absolute;
+  top: 326px;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: black;
+  left: 10px;
+}
+
+#showCompletedBookingsCarMoreDetailsP {
+  position: absolute;
+  top: 344px;
+  font-family: sans-serif;
+  font-size: 0.8em;
+  color: black;
+  left: 8px;
+}
+
+#showCompletedBookingsCloseContainer {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: midnightblue;
+  left: 221px;
+  top: 379px;
+  cursor: pointer;
+}
+
+#noCompletedBookings {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1.4em;
+  color: black;
+  top: 146px;
+  left: 82px;
+}
+
+#fetchedCarPendingBookingsMainContainer {
+  position: absolute;
+  width: 269px;
+  left: 10px;
+  height: 621px;
+  background-color: darkgray;
+  border-radius: 6px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#fetchedCarPendingBookingsMainContainer::-webkit-scrollbar {
+  display: none;
+}
+
+#fetchedPendingBookingCarBG {
+  position: relative;
+  width: 247px;
+  height: 211px;
+  background-color: lightgray;
+  border-radius: 5px;
+  left: 10px;
+  top: 10px;
+  margin-bottom: 21px;
+  padding: 2px 2px;
+  border: 0.6px solid gray;
+}
+
+#fetchedPcarBImageContainer {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  left: 11px;
+  top: 8px;
+  background-color: white;
+}
+
+#fetchedPcarBimage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#fetchedPcarBCustomerName {
+  position: absolute;
+  left: 77px;
+  font-family: sans-serif;
+  top: 9px;
+  font-size: 0.9em;
+  cursor: pointer;
+  color: darkblue;
+}
+
+#fetchedPcarBTextContainer {
+  position: absolute;
+  width: 159px;
+  height: 158px;
+  background-color: white;
+  left: 79px;
+  top: 27px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 0px 10px 10px;
+  border: 0.5px solid black;
+}
+
+#fetchedPcarBTextContainer::-webkit-scrollbar {
+  display: none;
+}
+
+#fetchedPcarBemailText {
+  position: absolute;
+  left: 118px;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: darkred;
+  top: 189px;
+  cursor: pointer;
+}
+
+#fetchedPcarBSL {
+  position: absolute;
+  width: 268px;
+  height: 1px;
+  background-color: black;
+  top: 218px;
+  left: -10px;
+}
+
+#fetchedPcarBTxt {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: black;
+}
+
+#fetchedPcarBmoreDetails {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 0.7em;
+  color: black;
+  left: 3px;
+  top: 71px;
+}
+
+#fetchedPcarBrespondButton {
+  position: absolute;
+  left: 5px;
+  padding: 3px 5px;
+  cursor: pointer;
+  background-color: lightgreen;
+  border-radius: 5px;
+  top: 88px;
+}
+
+#fetchedPcarBrejectButton {
+  position: absolute;
+  left: 5px;
+  padding: 3px 13px;
+  cursor: pointer;
+  background-color: lightgray;
+  border-radius: 5px;
+  top: 122px;
+}
+
+#respondToUserModalContainer {
+  position: absolute;
+  width: 400px;
+  height: 254px;
+  background-color: white;
+  border-radius: 6px;
+  left: 615px;
+  top: 223px;
+}
+
+#respondToUserModalFirstHead {
+  position: absolute;
+  left: 4px;
+  top: 2px;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: black;
+}
+
+#respondToUserNameSpan {
+  position: relative;
+  color: darkblue;
+  cursor: pointer;
+}
+
+#respondToUserModalBookedAt {
+  position: absolute;
+  left: 4px;
+  top: 17px;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: black;
+}
+
+#respondToUserBookedAt,
+#respondToUserBookedDate {
+  position: relative;
+  color: darkred;
+  cursor: pointer;
+}
+
+#respondTouserModalSL {
+  position: absolute;
+  width: 400px;
+  height: 1px;
+  background-color: black;
+  top: 37px;
+}
+
+#respondToUserModalSecondHead {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: black;
+  top: 39px;
+  left: 8px;
+}
+
+#respondToUserModalMainContainer {
+  position: absolute;
+  width: 377px;
+  height: 154px;
+  border-radius: 5px;
+  left: 10px;
+  top: 60px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-indent: 10px;
+}
+
+#respondToUserModalSubmitBtn {
+  position: absolute;
+  padding: 3px 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 5px;
+  left: 285px;
+  top: 222px;
+  cursor: pointer;
+  background-color: lemonchiffon;
+}
+
+#respondToUserModalCancelP {
+  position: absolute;
+  font-family: sans-serif;
+  left: 6px;
+  top: 231px;
+  font-size: 1.1em;
+  cursor: pointer;
+  color: black;
+}
+
+#rejectUserBookingModalContainer {
+  position: absolute;
+  width: 400px;
+  height: 254px;
+  background-color: white;
+  border-radius: 6px;
+  left: 615px;
+  top: 223px;
+}
+
+#rejectUserBookingModalFirstHead {
+  position: absolute;
+  left: 4px;
+  top: 2px;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: black;
+}
+
+#rejectUserBookingModalSL {
+  position: absolute;
+  width: 400px;
+  height: 1px;
+  top: 19px;
+  background-color: black;
+}
+
+#rejectUserMainContainerData {
+  position: absolute;
+  width: 377px;
+  height: 170px;
+  border-radius: 5px;
+  left: 10px;
+  top: 34px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-indent: 10px;
+}
+
+#rejectUserBookingModalSubmitBtn {
+  position: absolute;
+  padding: 6px 10px;
+  cursor: pointer;
+  background-color: lightcoral;
+  border-radius: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  left: 275px;
+  top: 215px;
+}
+
+#rejectUserBookingCloseP {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  color: black;
+  left: 10px;
+  top: 229px;
+  cursor: pointer;
+}
+
+#noPendingBookingsForSelectedCar {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1.3em;
+  color: black;
+  left: 60px;
+  top: 238px;
+  cursor: pointer;
+}
+
+#MSCDdescriptionContainer::-webkit-scrollbar {
+  display: none;
+}
+
+#DCIcontainer::-webkit-scrollbar {
+  display: none;
+}
+
+#otherBookedCarModalContainer {
+  position: absolute;
+  width: 625px;
+  height: 390px;
+  background-color: white;
+  border-radius: 7px;
+  left: 520px;
+  top: 132px;
+}
+
+#otherBookedCarModalImage {
+  position: absolute;
+  width: 227px;
+  height: 160px;
+  border-radius: 5px;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+  object-fit: cover;
+  border: 0.6px solid darkslategray;
+}
+
+#otherBookedCarImagenName {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: black;
+  left: 10px;
+  top: 176px;
+}
+
+#otherBookedCarModalPrice {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: black;
+  left: 10px;
+  top: 192px;
+}
+
+#selectedCarBookedByUser {
+  position: relative;
+  color: indigo;
+  cursor: pointer;
+}
+
+#selectedCarPriceBookedByUser {
+  position: relative;
+  cursor: pointer;
+  color: darkred;
+}
+
+#selectedCarCountBookedByUser {
+  position: relative;
+  cursor: pointer;
+  color: blueviolet;
+}
+
+#otherBookedCarModalUserQueryHead {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: black;
+  left: 248px;
+  top: 5px;
+}
+
+#otherBookedCarModalQueryContainer {
+  position: absolute;
+  width: 364px;
+  height: 146px;
+  background-color: dimgray;
+  left: 250px;
+  top: 25px;
+  border-radius: 5px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#otherBookedCarModalQueryContainer::-webkit-scrollbar {
+  display: none;
+}
+
+#otherBookedCarModalPText {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+  top: 2px;
+  left: 2px;
+}
+
+#otherBookedCarModalSL {
+  position: absolute;
+  width: 625px;
+  height: 1px;
+  top: 210px;
+  background-color: black;
+}
+
+#otherBookedCarImageContainer {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  background-color: black;
+  border-radius: 50%;
+  left: 10px;
+  top: 220px;
+  cursor: pointer;
+}
+
+#otherBookedCarImageData {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+#otherBookedCarUserNameHead {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: black;
+  left: 92px;
+  top: 217px;
+}
+
+#otherBookedCarUserFullName {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: darkblue;
+  left: 101px;
+  top: 233px;
+  cursor: pointer;
+}
+
+#otherBookedCarBookedAtDate {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: black;
+  left: 99px;
+  top: 247px;
+}
+
+#otherBookedCarBookedDate {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  color: darkgreen;
+  left: 105px;
+  top: 264px;
+  cursor: pointer;
+}
+
+#otherBookedCarModalMainContainer {
+  position: absolute;
+  width: 376px;
+  height: 123px;
+  border-radius: 5px;
+  text-indent: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  left: 230px;
+  top: 234px;
+}
+
+#otherBookedCarModalExtraP {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: black;
+  left: 232px;
+  top: 217px;
+}
+
+#otherBookedCarEmailFirstHead {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1em;
+  left: 10px;
+  top: 308px;
+}
+
+#otherBookedCarEmailText {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  left: 10px;
+  top: 325px;
+  cursor: pointer;
+  color: dimgrey;
+}
+
+#otherBookedCarPositionEmail {
+  position: relative;
+  top: 40px;
+}
+
+#otherBookedCarTimeP {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: darkgreen;
+  left: 94px;
+  top: 284px;
+  cursor: pointer;
+}
+
+#sendResponseToOtherBookingUser {
+  position: absolute;
+  padding: 6px 6px;
+  cursor: pointer;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 5px;
+  left: 72px;
+  top: 311px;
+  background-color: aquamarine;
+}
+
+#cancelRespondToOtherBookingUser {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  color: lightcoral;
+  left: 560px;
+  top: 366px;
+  cursor: pointer;
+}
+
+#noPendingBookingsForOtherCarsInshowroom {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: black;
+  left: 168px;
+  top: 123px;
+}

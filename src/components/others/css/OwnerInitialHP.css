@@ -1,0 +1,147 @@
+#setupOwnerElements {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#setupDetailsContainer {
+  position: relative;
+  width: 200px;
+  height: 1000px;
+  background-color: black;
+  border-radius: 6px;
+}
+
+#mainContainerOP {
+  position: relative;
+  width: 380px;
+  height: 262px;
+  background-color: white;
+  border-radius: 6px;
+  top: 235px;
+  right: 69px;
+}
+
+#MCheadL {
+  position: relative;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  top: 5px;
+}
+
+#MCSL {
+  position: relative;
+  width: auto;
+  height: 1px;
+  background-color: black;
+  top: 8px;
+}
+
+#carCompanyInput {
+  position: relative;
+  left: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 6px;
+  text-indent: 8px;
+  top: 20px;
+  padding: 7px 107px;
+}
+
+#showroomLocationInput {
+  position: relative;
+  left: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 6px;
+  text-indent: 8px;
+  top: 37px;
+  padding: 7px 107px;
+}
+
+.image-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.upload-buttonOwnerPage {
+  display: inline-block;
+  padding: 7px 35px;
+  background-color: lightgray;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 0.6px solid black;
+  position: relative;
+  top: 31px;
+  right: 9px;
+}
+
+.upload-buttonOwnerPage:hover {
+  background-color: gray;
+  color: white;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.image-preview {
+  max-width: 200px;
+  max-height: 200px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#completeOAButton {
+  position: relative;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  background-color: lightgoldenrodyellow;
+  padding: 9px 132px;
+  top: 25px;
+  left: 10px;
+}
+
+#cancelOAcreation {
+  position: relative;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  background-color: lightcoral;
+  padding: 9px 64px;
+  left: 198px;
+  bottom: 61px;
+}
+
+#belowtxtOA {
+  position: relative;
+  left: 6px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  bottom: 4px;
+}
+
+#belowtxtOA::after {
+  content: "✔";
+  position: absolute;
+  left: 313px;
+  top: 3px;
+  color: lightskyblue;
+  font-size: 18px;
+  line-height: 1;
+}
