@@ -214,9 +214,9 @@ const CustomerHome = () => {
     }, 100);
   };
 
-  useEffect(() => {
-    handleFetchSelectedSRcars();
-  }, [selectedSRdata]);
+  // useEffect(() => {
+  //   handleFetchSelectedSRcars();
+  // }, [selectedSRdata]);
 
   useEffect(() => {
     fetchShowroomData();
@@ -228,7 +228,22 @@ const CustomerHome = () => {
     setSelectedSRdata(showroom);
     setVCcarShowImage(false);
     setVCcarImage(null);
+    handlefetchshowroomcars(showroom._id);
   };
+
+  const handlefetchshowroomcars = async (ownerId) => {
+    try {
+      const response = await axios.get(
+        `${process.env.REACT_APP_API_URL}/showroom/${ownerId}/cars`
+      );
+      if (response.status === 200) {
+        setSelectedSRcars(response.data.cars);
+      }
+    } catch (err) {
+      console.error("Failed to fetch selected showroom cars due to: ", err);
+    }
+  };
+  
 
   const fetchShowroomData = () => {
     const showroomData = JSON.parse(localStorage.getItem("selectedSR"));
@@ -237,23 +252,23 @@ const CustomerHome = () => {
     }
   };
 
-  const handleFetchSelectedSRcars = async () => {
-    try {
-      const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/getMineCars`,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
-      );
-      if (response.status === 200) {
-        setSelectedSRcars(response.data.cars);
-      }
-    } catch (err) {
-      console.error("Failed to fetch selected showroom cars due to: ", err);
-    }
-  };  
+  // const handleFetchSelectedSRcars = async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       `${process.env.REACT_APP_API_URL}/getMineCars`,
+  //       {
+  //         headers: {
+  //           Authorization: `Bearer ${localStorage.getItem("token")}`,
+  //         },
+  //       }
+  //     );
+  //     if (response.status === 200) {
+  //       setSelectedSRcars(response.data.cars);
+  //     }
+  //   } catch (err) {
+  //     console.error("Failed to fetch selected showroom cars due to: ", err);
+  //   }
+  // };  
 
   const handleViewSelectedCar = (car) => {
     setSelectedCar(true);
