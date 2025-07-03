@@ -46,7 +46,7 @@ const OwnerHomeFooter = ({
         const token = localStorage.getItem("token");
   
         const response = await axios.get(
-          `${process.env.REACT_APP_API_URL}/getMineCars/${user._id}`,
+          `${process.env.REACT_APP_API_URL}/getMineCars`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
