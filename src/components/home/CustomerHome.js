@@ -378,6 +378,11 @@ const CustomerHome = () => {
         `${process.env.REACT_APP_API_URL}/customers/saveCarBooking?ownerId=${selectedSRdata?._id}&carId=${VCdata?._id}`,
         {
           bookingContent: appointmentContent,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
         }
       );
       if (response.status === 200) {
