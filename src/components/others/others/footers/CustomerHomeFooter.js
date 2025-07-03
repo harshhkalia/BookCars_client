@@ -12,7 +12,7 @@ const CustomerHomeFooter = ({ showroomHistory, user, setShowroomHistory }) => {
     if (!confirmation) return;
     try {
       const response = await axios.delete(
-        `${process.env.REACT_APP_API_URL}/customers/removeVisitedShowroom?customerId=${user?._id}&ownerId=${showroom?.ownerId?._id}`,
+        `${process.env.REACT_APP_API_URL}/customers/removeVisitedShowroom?ownerId=${showroom?.ownerId?._id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

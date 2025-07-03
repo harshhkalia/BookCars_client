@@ -41,7 +41,6 @@ const OwnerInitialHP = () => {
     formData.append("location", location);
     formData.append("companyName", companyName);
     formData.append("showRoomPFP", image);
-    formData.append("id", user?._id);
     try {
       const response = await axios.put(
         `${process.env.REACT_APP_API_URL}/completeOwnerDetails`,

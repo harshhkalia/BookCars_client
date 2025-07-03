@@ -166,7 +166,6 @@ const CustomerHome = () => {
     }
   
     const formData = new FormData();
-    formData.append("id", user?._id);
     formData.append("confirmPassword", editDetails.confirmPassword);
     if (editDetails.firstName)
       formData.append("firstName", editDetails.firstName);
@@ -241,17 +240,20 @@ const CustomerHome = () => {
   const handleFetchSelectedSRcars = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/getMineCars/${selectedSRdata?._id}`
+        `${process.env.REACT_APP_API_URL}/getMineCars`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
       );
       if (response.status === 200) {
         setSelectedSRcars(response.data.cars);
-      } else {
-        return;
       }
     } catch (err) {
-      console.error("Failed to fetch selected showroom cars due to : ", err);
+      console.error("Failed to fetch selected showroom cars due to: ", err);
     }
-  };
+  };  
 
   const handleViewSelectedCar = (car) => {
     setSelectedCar(true);
@@ -298,7 +300,7 @@ const CustomerHome = () => {
     const handleSaveShowroomHistory = async () => {
       try {
         const response = await axios.post(
-          `${process.env.REACT_APP_API_URL}/customers/recentlyVisitedShowrooms?customerId=${user?._id}`,
+          `${process.env.REACT_APP_API_URL}/customers/recentlyVisitedShowrooms`,
           {
             ownerId: selectedSRdata?._id,
           },
@@ -327,7 +329,7 @@ const CustomerHome = () => {
   const handleFetchAllUserVisits = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/customers/allVisitedShowrooms?customerId=${user?._id}`,
+        `${process.env.REACT_APP_API_URL}/customers/allVisitedShowrooms`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -358,7 +360,7 @@ const CustomerHome = () => {
 
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API_URL}/customers/saveCarBooking?customerId=${user?._id}&ownerId=${selectedSRdata?._id}&carId=${VCdata?._id}`,
+        `${process.env.REACT_APP_API_URL}/customers/saveCarBooking?ownerId=${selectedSRdata?._id}&carId=${VCdata?._id}`,
         {
           bookingContent: appointmentContent,
         }
@@ -401,7 +403,7 @@ const CustomerHome = () => {
   const handleFetchCustomerPendingBookings = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/customer/fetchPendingBookingsForCustomer?customerId=${user?._id}`,
+        `${process.env.REACT_APP_API_URL}/customer/fetchPendingBookingsForCustomer`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -440,7 +442,7 @@ const CustomerHome = () => {
   const handleFetchCustomerAcceptedBookings = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/customer/fetchAcceptedBookingsForCustomer?customerId=${user._id}`,
+        `${process.env.REACT_APP_API_URL}/customer/fetchAcceptedBookingsForCustomer`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -478,7 +480,7 @@ const CustomerHome = () => {
   const handleFetchCustomerRejectedBookingsFromFunction = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/customer/fetchRejectedBookingsForCustomer?customerId=${user._id}`,
+        `${process.env.REACT_APP_API_URL}/customer/fetchRejectedBookingsForCustomer`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

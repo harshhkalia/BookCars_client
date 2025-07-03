@@ -225,7 +225,6 @@ const OwnerHome = () => {
     formData.append("carDescription", carsInfo.modelDescription);
     formData.append("emiCount", carsInfo.emiRate);
     formData.append("carsCount", carsInfo.carsCount);
-    formData.append("id", user._id);
 
     carImages.forEach((image) => {
       formData.append("carImages", image);
@@ -329,7 +328,6 @@ const OwnerHome = () => {
     if (newProfilePic) formData.append("newProfilePic", newProfilePic);
     if (newShowroomCoverPic)
       formData.append("newShowroomCover", newShowroomCoverPic);
-    formData.append("id", user?._id);
 
     try {
       const response = await axios.put(
@@ -442,7 +440,7 @@ const OwnerHome = () => {
   const handleAllFetchPendingBookings = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/owner/fetchAllPendingAppointmentsForOwner?ownerId=${user._id}`,
+        `${process.env.REACT_APP_API_URL}/owner/fetchAllPendingAppointmentsForOwner`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -530,17 +528,24 @@ const OwnerHome = () => {
 
   const handleSendRespondToCustomer = async () => {
     try {
-      const response = await axios.put(
-        `${process.env.REACT_APP_API_URL}/owner/acceptCustomerPB?bookingId=${storeUserInfoPB._id}&carId=${storeUserInfoPB.carId}`,
-        {
-          ownerReplyToCustomer: ownerRespond,
-        }
-      );
-
       if (!ownerRespond) {
         return window.alert("Please add some content to your response.");
       }
-
+  
+      const response = await axios.put(
+        `${process.env.REACT_APP_API_URL}/owner/acceptCustomerPB`,
+        {
+          bookingId: storeUserInfoPB._id,
+          carId: storeUserInfoPB.carId,
+          ownerReplyToCustomer: ownerRespond,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
+  
       if (response.status === 200) {
         window.alert(response.data.message);
         setShowSelectedPendingBooking(false);
@@ -564,7 +569,7 @@ const OwnerHome = () => {
         window.alert("An unexpected error occurred. Please try again.");
       }
     }
-  };
+  };  
 
   const handleShowFRBUI = (booking) => {
     setFrontUIrejectBooking(booking);
@@ -579,14 +584,13 @@ const OwnerHome = () => {
 
   const handleRejectBookingThroughFrontUI = async () => {
     try {
-      const confirmation = window.confirm(
-        "Do you want to reject this booking ?"
-      );
+      const confirmation = window.confirm("Do you want to reject this booking?");
       if (!confirmation) return;
   
       const response = await axios.put(
-        `${process.env.REACT_APP_API_URL}/owner/rejectCustomerPB?bookingId=${frontUIrejectBooking._id}`,
+        `${process.env.REACT_APP_API_URL}/owner/rejectCustomerPB`,
         {
+          bookingId: frontUIrejectBooking._id,
           reasonforRejection: rejectionReason,
         },
         {
@@ -634,7 +638,7 @@ const OwnerHome = () => {
   const handleFetchCompletedBookingsForOwner = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/owner/fetchCompletedBookingsForOwner?ownerId=${user?._id}`,
+        `${process.env.REACT_APP_API_URL}/owner/fetchCompletedBookingsForOwner`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -683,13 +687,18 @@ const OwnerHome = () => {
           },
         }
       );
+  
       if (response.status === 200) {
         setFetchedCarPendingBookings(response.data.bookings);
       }
     } catch (error) {
       console.error(
-        "Failed to fetch pending bookings for selected car due to : ",
+        "Failed to fetch pending bookings for selected car due to:",
         error
+      );
+      window.alert(
+        error.response?.data?.message ||
+          "An unexpected error occurred while fetching bookings."
       );
     }
   };  
@@ -726,15 +735,24 @@ const OwnerHome = () => {
 
   const handleSendResponseToUserSuccessfully = async () => {
     try {
-      const response = await axios.put(
-        `${process.env.REACT_APP_API_URL}/owner/acceptCustomerPB?bookingId=${responduserData._id}&carId=${responduserData.carId}`,
-        { ownerReplyToCustomer: responseText }
-      );
-
       if (!responseText) {
         return window.alert("Please add some content to your response.");
       }
-
+  
+      const response = await axios.put(
+        `${process.env.REACT_APP_API_URL}/owner/acceptCustomerPB`,
+        {
+          bookingId: responduserData._id,
+          carId: responduserData.carId,
+          ownerReplyToCustomer: responseText,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
+  
       if (response.status === 200) {
         window.alert(response.data.message);
         setRespondToUserModal(false);
@@ -756,7 +774,7 @@ const OwnerHome = () => {
         window.alert("An unexpected error occurred. Please try again.");
       }
     }
-  };
+  };  
 
   const handleRejectBookingOfUser = async () => {
     try {
@@ -804,12 +822,12 @@ const OwnerHome = () => {
         window.alert("An unexpected error occurred. Please try again.");
       }
     }
-  };  
+  };
 
   const handleFetchOtherCarsBookings = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/owner/fetchPendingBookingsForOtherCars?carId=${selectedCarInfo._id}&ownerId=${user._id}`,
+        `${process.env.REACT_APP_API_URL}/owner/fetchPendingBookingsForOtherCars?carId=${selectedCarInfo._id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -874,8 +892,10 @@ const OwnerHome = () => {
       }
   
       const response = await axios.put(
-        `${process.env.REACT_APP_API_URL}/owner/acceptCustomerPB?bookingId=${selectedOtherBookedCar._id}&carId=${selectedOtherBookedCar.carId}`,
+        `${process.env.REACT_APP_API_URL}/owner/acceptCustomerPB`,
         {
+          bookingId: selectedOtherBookedCar._id,
+          carId: selectedOtherBookedCar.carId,
           ownerReplyToCustomer: responseTextToOtherBooking,
         },
         {
@@ -913,17 +933,18 @@ const OwnerHome = () => {
   const handleRejectBookingForOtherCar = async () => {
     try {
       const confirmation = window.confirm(
-        "Are you sure you want to reject this booking ?"
+        "Are you sure you want to reject this booking?"
       );
       if (!confirmation) return;
   
-      if (!rejectTextToOtherBooking) {
-        return window.alert("Please add some content to your response.");
+      if (!rejectTextToOtherBooking || rejectTextToOtherBooking.trim().length < 5) {
+        return window.alert("Please add a proper reason for rejection (min 5 characters).");
       }
   
       const response = await axios.put(
-        `${process.env.REACT_APP_API_URL}/owner/rejectCustomerPB?bookingId=${selectedRejectedData._id}`,
+        `${process.env.REACT_APP_API_URL}/owner/rejectCustomerPB`,
         {
+          bookingId: selectedRejectedData._id,
           reasonforRejection: rejectTextToOtherBooking,
         },
         {
@@ -944,10 +965,10 @@ const OwnerHome = () => {
           )
         );
       } else {
-        window.alert("Something went wrong while rejecting customer.");
+        window.alert("Something went wrong while rejecting the booking.");
       }
     } catch (error) {
-      console.error("Failed to reject customer due to : ", error);
+      console.error("Failed to reject booking due to:", error);
       if (error.response?.data?.errors) {
         window.alert(error.response.data.errors.join("\n"));
       } else if (error.response?.data?.message) {
