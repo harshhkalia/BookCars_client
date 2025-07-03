@@ -692,14 +692,18 @@ const OwnerHome = () => {
         setFetchedCarPendingBookings(response.data.bookings);
       }
     } catch (error) {
-      console.error(
-        "Failed to fetch pending bookings for selected car due to:",
-        error
-      );
-      window.alert(
-        error.response?.data?.message ||
-          "An unexpected error occurred while fetching bookings."
-      );
+      if (error.response?.status === 404) {
+        setFetchedCarPendingBookings([]);
+      } else {
+        console.error(
+          "Failed to fetch pending bookings for selected car due to:",
+          error
+        );
+        window.alert(
+          error.response?.data?.message ||
+            "An unexpected error occurred while fetching bookings."
+        );
+      }
     }
   };  
 
