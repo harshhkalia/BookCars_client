@@ -53,12 +53,12 @@ const Auth = () => {
 
   const handleSetupAccount = async (event) => {
     event.preventDefault();
-
+  
     if (data.password !== data.comfirmPassword) {
-      window.alert("Passwords do not match!, please correct the passwords");
+      window.alert("Passwords do not match! Please correct them.");
       return;
     }
-
+  
     const formData = new FormData();
     formData.append("profilePic", userPFP);
     formData.append("firstName", data.firstName);
@@ -66,13 +66,21 @@ const Auth = () => {
     formData.append("email", data.email);
     formData.append("password", data.password);
     formData.append("userType", data.userType);
+  
     try {
       const response = await axios.post(
         `${process.env.REACT_APP_API_URL}/createAccount`,
         formData
       );
-      if (response.status === 201) {
-        window.alert(response.data.message);
+  
+      console.log("Signup API response:", response); // 🧪 debug log
+  
+      // Accept 201 or 200 as successful status
+      if (response.status === 201 || response.status === 200) {
+        const message = response.data?.message || "Account created successfully!";
+        window.alert(message);
+  
+        // Reset form and switch UI to login
         setIsLoginContainer(true);
         setData({
           firstName: "",
@@ -83,15 +91,20 @@ const Auth = () => {
           userType: "Customer",
         });
         setUserPFP(null);
+      } else {
+        // Fallback alert if unexpected status code
+        window.alert("Something went wrong during signup. Please try again.");
       }
     } catch (err) {
-      console.log(err);
-      window.alert(
-        err.response?.data?.message ||
-          "An error occurred while creating the account."
-      );
+      console.error("Signup error:", err);
+  
+      if (err.response?.data?.message) {
+        window.alert(err.response.data.message);
+      } else {
+        window.alert("An unexpected error occurred while creating the account.");
+      }
     }
-  };
+  };  
 
   const handleCheckUserDetails = async (event) => {
     event.preventDefault();
