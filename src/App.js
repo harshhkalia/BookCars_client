@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { Suspense, lazy } from "react";
 import ProtectedRoute from "./protectedRoute";
+import Auth from "./components/auth/Auth";
 
-const Auth = lazy(() => import("./components/auth/Auth"));
 const CustomerHome = lazy(() => import("./components/home/CustomerHome"));
 const OwnerInitialHP = lazy(() => import("./components/home/OwnerInitialHP"));
 const OwnerHome = lazy(() => import("./components/home/OwnerHome"));
