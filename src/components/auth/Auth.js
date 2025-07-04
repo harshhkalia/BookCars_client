@@ -55,12 +55,12 @@ const Auth = () => {
     event.preventDefault();
   
     if (data.password !== data.comfirmPassword) {
-      window.alert("Passwords do not match! Please correct them.");
+      window.alert("Passwords do not match!, please correct the passwords");
       return;
     }
   
     const formData = new FormData();
-    formData.append("profilePic", userPFP);
+    formData.append("profilePic", userPFP); // 👈 Only if userPFP is not null
     formData.append("firstName", data.firstName);
     formData.append("lastName", data.lastName);
     formData.append("email", data.email);
@@ -71,17 +71,14 @@ const Auth = () => {
       const response = await axios.post(
         `${process.env.REACT_APP_API_URL}/createAccount`,
         formData
+        // ⚠️ Don't manually set headers here — let Axios handle it for FormData
       );
   
-      console.log("Signup API response:", response); // 🧪 debug log
+      if (response.status === 201) {
+        window.alert(response.data.message);
   
-      // Accept 201 or 200 as successful status
-      if (response.status === 201 || response.status === 200) {
-        const message = response.data?.message || "Account created successfully!";
-        window.alert(message);
-  
-        // Reset form and switch UI to login
         setIsLoginContainer(true);
+  
         setData({
           firstName: "",
           lastName: "",
@@ -90,19 +87,15 @@ const Auth = () => {
           comfirmPassword: "",
           userType: "Customer",
         });
+  
         setUserPFP(null);
-      } else {
-        // Fallback alert if unexpected status code
-        window.alert("Something went wrong during signup. Please try again.");
       }
     } catch (err) {
-      console.error("Signup error:", err);
-  
-      if (err.response?.data?.message) {
-        window.alert(err.response.data.message);
-      } else {
-        window.alert("An unexpected error occurred while creating the account.");
-      }
+      console.log("Signup error:", err);
+      window.alert(
+        err.response?.data?.message ||
+          "An error occurred while creating the account."
+      );
     }
   };  
 
