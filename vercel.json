@@ -19,7 +19,7 @@
         ]
       },
       {
-        "source": "/(.*)",
+        "source": "/((?!.*\\.(js|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|ico|css)$).*)",
         "headers": [
           {
             "key": "Cache-Control",
